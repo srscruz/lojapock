@@ -4,18 +4,26 @@ import { API_CONFIG } from "../config/api.config";
 import { LocalUser } from "../models/local_user";
 import { StorageService } from "./storage.service";
 import { Injectable } from "@angular/core";
+<<<<<<< HEAD
+import { JwtHelper } from "angular2-jwt";
+=======
 import {JwtHelper} from "angular2-jwt";
 
+>>>>>>> d9482cfe706a22138415b976ea0f93e8e733041d
 
 
 @Injectable()
 export class AuthService {
 
+<<<<<<< HEAD
+     jwtHelper: JwtHelper = new JwtHelper();
+=======
    jwtHelper: JwtHelper = new JwtHelper();
+>>>>>>> d9482cfe706a22138415b976ea0f93e8e733041d
 
     constructor(
         public http: HttpClient, 
-        public storage: StorageService
+        public storage: StorageService,
         //public cartService: CartService
         ) {
     }
@@ -44,8 +52,12 @@ export class AuthService {
         let tok = authorizationValue.substring(7);
         let user : LocalUser = {
             token: tok,
+<<<<<<< HEAD
+            email : this.jwtHelper.decodeToken(tok).sub
+=======
             email: this.jwtHelper.decodeToken(tok).sub
            // email: this.jwtHelper.decodeToken(tok).sub
+>>>>>>> d9482cfe706a22138415b976ea0f93e8e733041d
         };
         this.storage.setLocalUser(user);
        // this.cartService.createOrClearCart();
