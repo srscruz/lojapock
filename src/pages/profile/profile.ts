@@ -15,10 +15,17 @@ import { StorageService } from '../../services/storage.service';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+<<<<<<< HEAD
   email: string;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
+=======
+  email : string;
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+>>>>>>> d9482cfe706a22138415b976ea0f93e8e733041d
     public storage: StorageService) {
   }
 
